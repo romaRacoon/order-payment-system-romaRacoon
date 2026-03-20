@@ -1,8 +1,10 @@
 package dev.sorokin.domain;
 
+import dev.sorokin.api.payment.PaymentStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Entity
@@ -22,5 +24,19 @@ public class OrderEntity {
     @Column(name = "address")
     private String address;
 
-    // todo остальные поля
+    @Column(name = "client_estimate", precision = 19, scale = 2)
+    private BigDecimal clientEstimate;
+
+    @Column(name = "final_amount", precision = 19, scale = 2)
+    private BigDecimal finalAmount;
+
+    @Column(name = "authorized_amount", precision = 19, scale = 2)
+    private BigDecimal authorizedAmount;
+
+    @Column(name = "captured_amount", precision = 19, scale = 2)
+    private BigDecimal capturedAmount;
+
+    @Enumerated(EnumType.STRING)  // Важно!
+    @Column(name = "payment_status", nullable = false)
+    private PaymentStatus paymentStatus;
 }
