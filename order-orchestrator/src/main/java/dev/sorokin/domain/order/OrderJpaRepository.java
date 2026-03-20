@@ -1,4 +1,4 @@
-package dev.sorokin.domain;
+package dev.sorokin.domain.order;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

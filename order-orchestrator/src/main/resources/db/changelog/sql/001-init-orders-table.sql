@@ -1,3 +1,4 @@
+--liquibase formatted sql
 -- changeset init-orders-:001
 
 -- TODO остальные поля, необходимые индексы
