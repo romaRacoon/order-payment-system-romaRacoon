@@ -21,7 +21,7 @@ ALTER TABLE orders ADD COLUMN captured_amount NUMERIC(19,2);
 --rollback ALTER TABLE orders DROP COLUMN captured_amount
 
 --changeset romaRacoon:002-05
---precondition-sql-check expectedResult:false SELECT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'payment_status')
+--precondition-sql-check expectedResult:f SELECT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'payment_status')
 CREATE TYPE payment_status AS ENUM ('NEW', 'AUTHORIZATION_FAILED', 'PRICE_CHANGED_FAILED', 'SUCCEED_PAID');
 --rollback DROP TYPE payment_status
 
