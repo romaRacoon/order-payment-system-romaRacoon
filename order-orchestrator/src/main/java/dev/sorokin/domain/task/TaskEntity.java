@@ -1,4 +1,4 @@
-package dev.sorokin.domain;
+package dev.sorokin.domain.task;
 
 import dev.sorokin.api.task.StepStatus;
 import dev.sorokin.api.task.TaskStatus;

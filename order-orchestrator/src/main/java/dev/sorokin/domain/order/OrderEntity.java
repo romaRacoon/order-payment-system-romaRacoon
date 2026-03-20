@@ -1,4 +1,4 @@
-package dev.sorokin.domain;
+package dev.sorokin.domain.order;
 
 import dev.sorokin.api.payment.PaymentStatus;
 import jakarta.persistence.*;
