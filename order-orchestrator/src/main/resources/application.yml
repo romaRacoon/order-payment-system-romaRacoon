@@ -25,3 +25,12 @@ springdoc:
 
 payment:
   stub-url: ${PAYMENT_STUB_URL:http://localhost:8081}
+  payment:
+    base-url: /payment
+    auth: /authorize
+    capture: /capture
+  warehouse:
+    base-url: /warehouse
+    calculate-price: /calculate-price
+
+retry: 1s

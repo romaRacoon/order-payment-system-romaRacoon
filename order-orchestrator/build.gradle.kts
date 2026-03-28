@@ -23,6 +23,7 @@ dependencies {
     // additional libs
     implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0")
     implementation("org.liquibase:liquibase-core")
+    implementation("org.springframework.boot:spring-boot-webclient:4.0.2")
     runtimeOnly("org.postgresql:postgresql")
 
     //  tests
